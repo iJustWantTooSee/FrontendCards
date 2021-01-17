@@ -1,3 +1,82 @@
-﻿body,html {
+﻿body, html {
     height: 100%;
+}
+
+.carousel-img {
+    object-position: center;
+    object-fit: cover;
+    margin-top: -20%;
+    margin-bottom: -20%;
+}
+
+img.card-img-top {
+    height: 180px;
+}
+
+.div-shadow {
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+%card-bg {
+
+}
+
+.page-1-card {
+    @extend %card-bg;
+}
+
+.page-2-card {
+    @extend %card-bg;
+
+
+    > .card-body {
+        > p {
+            font-weight: 700;
+        }
+    }
+}
+
+.page-3-card {
+    @extend %card-bg;
+
+
+    > .card-body {
+        > p {
+            &::after {
+                display: block;
+                content: "This content is added via css."
+            }
+        }
+    }
+}
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+@mixin breakpoint($point) {
+    @media (min-width: $point) {
+        @content;
+    }
+}
+
+.card-columns {
+    column-count: 1;
+
+    @include breakpoint($breakpoint-sm) {
+        column-count: 2;
+    }
+
+    @include breakpoint($breakpoint-md) {
+        column-count: 2;
+    }
+
+    @include breakpoint($breakpoint-lg) {
+        column-count: 3;
+    }
+
+    @include breakpoint($breakpoint-xl) {
+        column-count: 4;
+    }
 }

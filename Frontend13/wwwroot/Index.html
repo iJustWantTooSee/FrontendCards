@@ -14,12 +14,130 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Hedgehog's world</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pagination</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
-        <h1>Hello, world!</h1>
+        <div class="container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner wrapper-carousel-height">
+                    <div class="carousel-item active carousel-div-img">
+                        <img class="d-block h-100 img-fluid carousel-img" src="https://i1.wallbox.ru/wallpapers/preview/201729/15006159815971952dc3cff6.18555794.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item carousel-div-img">
+                        <img class="d-block h-100 img-fluid carousel-img" src="https://i1.wallbox.ru/wallpapers/preview/202013/priroda-poza-vzglad-volk.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item carousel-div-img">
+                        <img class="d-block h-100 img-fluid carousel-img" src="https://i1.wallbox.ru/wallpapers/preview/201117/403dad625df3c7f84bda3b988087e5da.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="row m-0">
+            <div class="col mt-4 p-0">
+                <h2 class="text-center">Pick a card...</h2>
+            </div>
+        </div>
+        <div>
+            <div class="container div-shadow p-0">
+                <div class="row m-3 justify-content-md-between no-gutters py-3">
+                    <div class="col-xl-6 col-md-5">
+                        <h4>Some cards are red, some card are blue...</h4>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapsible">Toggle the container</button>
+                    </div>
+                </div>
+                <div id="collapsible" class="collapse show">
+                    <div class="collapse show" id="page-1">
+                        <div class="row m-0">
+                            <div class="col-xl-3 col-lg-4 col-6 mb-3">
+                                <div class="card page-1-card">
+                                    <img class="card-img-top size" src="https://klopik.com/uploads/posts/2014-11/1416765070_2.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-italic">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse" id="page-2">
+                        <div class="row m-0">
+                            <div class="col-xl-3 col-lg-4 col-6 mb-3">
+                                <div class="card page-2-card">
+                                    <img class="card-img-top size" src="https://mobimg.b-cdn.net/pic/v2/gallery/preview/ezhiki-kaktusy-yumor-zhivotnye-3.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-italic">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse" id="page-3">
+                        <div class="row m-0">
+                            <div class="col-xl-3 col-lg-4 col-6 mb-3">
+                                <div class="card page-3-card">
+                                    <img class="card-img-top size" src="https://mobimg.b-cdn.net/pic/v2/gallery/preview/ezhiki-zhivotnye-26247.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title font-italic">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-3 justify-content-md-between no-gutters py-3">
+                    <div class="col-xl-6 col-md-5">
+                        <h4>...and pick the one that suits you</h4>
+                    </div>
+                    <div class="col-auto">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item" data-toggle="collapse" data-target=""><a class="page-link" id="previous-page-link" href="#">Previous</a></li>
+                                <li class="page-item" aria-expanded="true" data-toggle="collapse" data-target="#first-page"><a class="page-link" id="first-page-link" href="#">1</a></li>
+                                <li class="page-item" aria-expanded="false" data-toggle="collapse" data-target="#second-page"><a class="page-link" id="second-page-link" href="#">2</a></li>
+                                <li class="page-item" aria-expanded="false" data-toggle="collapse" data-target="#third-page"><a class="page-link" id="third-page-link" href="#">3</a></li>
+                                <li class="page-item" data-toggle="collapse" data-target=""><a class="page-link" id="next-page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer></footer>
 
